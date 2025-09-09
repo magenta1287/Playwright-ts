@@ -106,11 +106,11 @@ test.only('Create and verify a New Case in Chatter', async ({ page }) => {
     await page.locator('[data-value="High"]').click()
     await page.locator('//button[@aria-label="Case Origin"]').click()
     await page.locator('[title="Email"]').click()
-    await page.locator('[name="Subject"]').fill("Product Return Request")
     // Steps 20 and 21 Enter Subject and Description and Save
-    // await page.locator('//label[text()="Description"]').fill("Requesting a return for a defective product")
-    // await page.locator('//button[text()="Save"]').click()
-    // // Steps 22 to 23  Edit the Status under Details category, choose ‘Escalated’ option and Save
+    await page.locator('[name="Subject"]').fill("Product Return Request")
+    await page.locator('//label[text()="Description"]').fill("Requesting a return for a defective product")
+    await page.locator('//button[text()="Save"]').click()
+    // Steps 22 to 23  Edit the Status under Details category, choose ‘Escalated’ option and Save
     // await page.locator('//button[text()="Save"]').click()
     // await page.locator('//button[text()="Save"]').click()
     // await page.locator('//button[text()="Save"]').click()
